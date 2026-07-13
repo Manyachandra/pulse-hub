@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🗳️ PulseHub
+
+A minimal local-first **polling and voting app** built with **Next.js 16**, **TypeScript**, **Tailwind CSS**, **shadcn/ui**, and **SQLite**. Create polls, vote on options, and visualize simple results without leaving your local environment.
+
+**Author:** Manya Chandra  
+**Contact:** manyachandra@proton.me  
+**License:** MIT
+
+---
+
+## About
+
+**PulseHub** is a straightforward insight-capture tool: run polls, gather responses, and track choices in a clean interface. Instead of relying on external analytics or heavy survey platforms, it keeps everything in your own SQLite database with a front-end that feels immediate to use.
+
+This repo includes:
+- reactive UI with Next.js 16 App Router
+- shadcn/ui-styled components for dialogs, tabs, selects, and notifications
+- Prisma schema for polls, options, and votes
+- local-first workflow with `npx prisma db push`
+
+## Features
+
+- 🚀 Next.js 16 App Router with TypeScript
+- 🧩 shadcn/ui component patterns (`Button`, `Dialog`, `Select`, `Tabs`, `Sonner` toasts)
+- 🗳️ Poll model with multiple options and vote tracking
+- 💾 SQLite persistence through Prisma
+- 🎨 Tailwind CSS v4 + CSS theme tokens
+- 📱 Responsive layout
+
+## Tech Stack
+
+| Area | Choice |
+|---|---|
+| Framework | Next.js 16 |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Components | shadcn/ui |
+| Database | SQLite via Prisma |
+| Notifications | Sonner |
+| Theme | next-themes |
+
+## Project Structure
+
+```
+pulse-hub/
+├── prisma/
+│   ├── schema.prisma
+│   └── prisma.config.ts
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/ui/
+│   │   ├── badge.tsx
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── dialog.tsx
+│   │   ├── dropdown-menu.tsx
+│   │   ├── input.tsx
+│   │   ├── label.tsx
+│   │   ├── select.tsx
+│   │   ├── sonner.tsx
+│   │   ├── tabs.tsx
+│   │   └── textarea.tsx
+│   └── lib/
+│       └── utils.ts
+├── components.json
+├── .env
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+└── tsconfig.json
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# install dependencies
+npm install
+
+# prepare prisma client and local DB
+npx prisma db push
+npx prisma generate
+
+# start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Database
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Schema lives in `prisma/schema.prisma`.
 
-## Learn More
+```bash
+npx prisma db push
+npx prisma generate
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Manya Chandra
+- GitHub: https://github.com/Manyachandra
+- Email: manyachandra@proton.me
