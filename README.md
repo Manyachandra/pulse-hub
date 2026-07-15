@@ -1,14 +1,21 @@
 # 🗳️ PulseHub
 
-A minimal local-first **polling and voting app** built with **Next.js 16**, **TypeScript**, **Tailwind CSS**, **shadcn/ui**, and **SQLite**. Create polls, vote on options, and visualize simple results without leaving your local environment.
+<p align="left">
+  <img src="https://img.shields.io/badge/Next.js-16-black" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-5-blue" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind-CSS-38bdf8" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Prisma-ORM-2d3748" alt="Prisma" />
+  <img src="https://img.shields.io/badge/SQLite-local-lightgrey" alt="SQLite" />
+  <img src="https://img.shields.io/badge/shadcn%2Fui-components-000" alt="shadcn/ui" />
+</p>
 
-**Author:** Manya Chandra  
-**Contact:** manyachandra@proton.me  
-**License:** MIT
-
----
-
-## About
+| Field | Value |
+|-------|-------|
+| **Title** | PulseHub |
+| **Description** | A minimal local-first polling and voting app built with Next.js, TypeScript, Tailwind, shadcn/ui, and SQLite. |
+| **Language** | TypeScript / Next.js App Router |
+| **Tags** | `nextjs` · `typescript` · `tailwindcss` · `prisma` · `sqlite` · `shadcn-ui` · `polling` · `voting` |
+| **Author** | Manya Chandra — [@Manyachandra](https://github.com/Manyachandra) |
 
 **PulseHub** is a straightforward insight-capture tool: run polls, gather responses, and track choices in a clean interface. Instead of relying on external analytics or heavy survey platforms, it keeps everything in your own SQLite database with a front-end that feels immediate to use.
 
@@ -102,6 +109,6 @@ npx prisma generate
 
 ## Author
 
-Manya Chandra
+**Manya Chandra**
 - GitHub: https://github.com/Manyachandra
 - Email: manyachandra@proton.me
